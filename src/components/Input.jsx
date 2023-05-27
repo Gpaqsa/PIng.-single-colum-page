@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Input = () => {
+const Input = ({ heandlerInputEvent, submitEmail, inputValue, error }) => {
   return (
-    <div className="input-main-content">
+    <form className="input-main-content" onClick={submitEmail}>
       <div className="input-container">
-        <input type="Email" placeholder="Your email address..." />
+        <input
+          type="Email"
+          placeholder="Your email address..."
+          onChange={heandlerInputEvent}
+          value={inputValue}
+          className={error ? "error" : ""}
+        />
       </div>
       <div className="button-container">
-        <button>Notify Me</button>
+        <button onClick={submitEmail}>Notify Me</button>
       </div>
-    </div>
+    </form>
   );
 };
 

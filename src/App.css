@@ -140,3 +140,9 @@ footer div a {
   margin-right: 10px;
   margin-left: 10px;
 }
+
+
+
+.error {
+  border: 1px solid hsl(354, 100%, 66%);
+}
