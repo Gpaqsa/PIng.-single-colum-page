@@ -1,7 +1,10 @@
 import "./App.css";
 import logo from "../src/images/logo.svg";
 import Input from "./components/Input";
-
+import screenShot from "./images/illustration-dashboard.png";
+import { FaFacebook } from "react-icons/fa";
+import { FiTwitter } from "react-icons/fi";
+import { BsInstagram, BsFacebook } from "react-icons/bs";
 function App() {
   return (
     <div className="App">
@@ -22,11 +25,27 @@ function App() {
         <Input />
 
         <section className="screenShotImg-content">
-          <div>
-            <img src="./images/illustration-dashboard.png" alt="dashboardImg" />
-          </div>
+          <img src={screenShot} alt="dashboardImg" />
         </section>
       </main>
+
+      <footer>
+        <div>
+          <a href="/">
+            <BsFacebook size={32} color="hsl(223, 87%, 63%)" />
+          </a>
+          <a href="/">
+            <FiTwitter size={32} color="hsl(223, 87%, 63%)" />
+          </a>
+          <a href="/">
+            <BsInstagram size={32} color="hsl(223, 87%, 63%)" />
+          </a>
+        </div>
+
+        <div>
+          <span>&copy; Copyright Ping. All rights reserved.</span>
+        </div>
+      </footer>
     </div>
   );
 }
