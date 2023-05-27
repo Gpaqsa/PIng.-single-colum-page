@@ -20,6 +20,12 @@ function App() {
         </div>
         {/* div className="input-main-content" */}
         <Input />
+
+        <section className="screenShotImg-content">
+          <div>
+            <img src="./images/illustration-dashboard.png" alt="dashboardImg" />
+          </div>
+        </section>
       </main>
     </div>
   );
