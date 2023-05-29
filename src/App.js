@@ -21,7 +21,7 @@ function App() {
     setInputValue(e.target.value);
     // console.log(inputValue);
 
-    if (inputValue.length === 0 || inputValue === " ") {
+    if (inputValue === " ") {
       setError(true);
     } else if (!inputValue.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
       setError(true);

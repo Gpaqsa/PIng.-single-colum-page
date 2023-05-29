@@ -6,11 +6,19 @@ const Input = ({ heandlerInputEvent, submitEmail, inputValue, error }) => {
       <div className="input-container">
         <input
           type="Email"
-          placeholder="Your email address..."
+          // placeholder="Your email address..."
+          placeholder={error ? "example@email/com" : "Your email address"}
           onChange={heandlerInputEvent}
           value={inputValue}
           className={error ? "error" : null}
         />
+        <div className="errorDiv">
+          {error ? (
+            <p className="errorMessage">
+              Please provide a valid email address...
+            </p>
+          ) : null}
+        </div>
       </div>
 
       {/* {console.log(inputValue)} */}
