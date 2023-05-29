@@ -9,11 +9,14 @@ const Input = ({ heandlerInputEvent, submitEmail, inputValue, error }) => {
           placeholder="Your email address..."
           onChange={heandlerInputEvent}
           value={inputValue}
-          className={error ? "error" : ""}
+          className={error ? "error" : null}
         />
       </div>
+
+      {/* {console.log(inputValue)} */}
       <div className="button-container">
         <button onClick={submitEmail}>Notify Me</button>
+        {/* {console.log(submitEmail)} */}
       </div>
     </form>
   );

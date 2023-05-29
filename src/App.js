@@ -9,8 +9,9 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState(false);
 
+  // console.log(error);
   const heandlerInputEvent = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setInputValue(event.target.value);
     setError(false);
   };
@@ -18,14 +19,17 @@ function App() {
   const submitEmail = (e) => {
     e.preventDefault();
     setInputValue(e.target.value);
-    console.log(inputValue);
+    // console.log(inputValue);
 
-    if (inputValue === " ") {
+    if (inputValue.length === 0 || inputValue === " ") {
       setError(true);
-      return;
+    } else if (!inputValue.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
+      setError(true);
+    } else {
+      setError(false);
+      setInputValue("");
+      alert("Your email has been pinged ");
     }
-
-    setInputValue("");
   };
 
   return (
