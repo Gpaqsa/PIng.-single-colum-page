@@ -174,10 +174,14 @@ footer div a {
   }
   .main-content {
     width: 100%;
+    align-items: center;
   }
   .phrase-content {
     font-size: 1.5rem;
     width: 100%;
+  }
+  .main-phrase {
+    font-size: 40px;
   }
 
   .input-main-content {
@@ -187,14 +191,14 @@ footer div a {
   }
   .input-container {
     align-items: center;
-    width: 100%;
+    width: 400px;
   }
   .input-container input {
     width: 100%;
   }
 
   .button-container {
-    width: 100%;
+    width: 400px;
   }
 
   .screenShotImg-content {
